@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+motor
+python-dotenv
+python-multipart
+aiofiles
+pydantic
+pydantic-core
+pymongo
+requests
+slowapi
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
