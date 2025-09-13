@@ -21,11 +21,6 @@
         }
     ],
     "env": {
-        "PYTHONPATH": "./app",
-        "MONGODB_URL": "mongodb+srv://chourasiavasu43_db_user:mgKwEju58khYinSD@cluster0.zpd2a0w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-        "DATABASE_NAME": "elevenlabs_clone",
-        "HOST": "0.0.0.0",
-        "PORT": "8000",
-        "DEBUG": "False"
+        "PYTHONPATH": "./app"
     }
 }
