@@ -133,12 +133,12 @@ dmypy.json
 *.db
 *.sqlite
 
-# Audio files (since we're using external URLs)
-audio_files/
-*.mp3
-*.wav
-*.m4a
-*.aac
+# Audio files - now included in deployment
+# audio_files/
+# *.mp3
+# *.wav
+# *.m4a
+# *.aac
 
 # Logs
 logs/

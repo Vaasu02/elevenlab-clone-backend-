@@ -25,12 +25,12 @@ async def seed_database():
         # Create audio_files directory if it doesn't exist
         os.makedirs(settings.AUDIO_FILES_PATH, exist_ok=True)
         
-        # Sample audio files data
+        # Sample audio files data with deployed backend URLs
         sample_files = [
             {
                 "language": "en",
                 "filename": "sample_english.mp3",
-                "url": "http://localhost:8000/api/audio/files/sample_english.mp3",
+                "url": "https://elevenlab-clone-backend.vercel.app/api/audio/files/sample_english.mp3",
                 "file_size": 1024000,  # 1MB
                 "duration": 30.5,
                 "format": "mp3"
@@ -38,7 +38,7 @@ async def seed_database():
             {
                 "language": "ar",
                 "filename": "sample_arabic.mp3",
-                "url": "http://localhost:8000/api/audio/files/sample_arabic.mp3",
+                "url": "https://elevenlab-clone-backend.vercel.app/api/audio/files/sample_arabic.mp3",
                 "file_size": 1200000,  # 1.2MB
                 "duration": 35.2,
                 "format": "mp3"
