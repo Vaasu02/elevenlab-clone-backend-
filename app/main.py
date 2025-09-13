@@ -56,6 +56,23 @@ async def health_check():
     """Health check endpoint"""
     return {"status": "healthy", "message": "ElevenLabs Clone API is running"}
 
+# Debug endpoint to test database connection
+@app.get("/debug/db")
+async def debug_database():
+    """Debug database connection"""
+    try:
+        from app.database import get_database
+        database = await get_database()
+        if database is None:
+            return {"error": "Database connection is None"}
+        
+        # Try to get collection
+        collection = database["audio_files"]
+        count = await collection.count_documents({})
+        return {"status": "connected", "collection_count": count}
+    except Exception as e:
+        return {"error": str(e), "type": type(e).__name__}
+
 # Include routers
 app.include_router(audio.router)
 
